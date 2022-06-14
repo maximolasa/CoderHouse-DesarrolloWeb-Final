@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="../css/estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<link rel="stylesheet" href="./css/estilos.css">
 
 
 
- <!-- Header-->
 
+<!-- Header-->
+<body class="fondo">
 
 
 <header class="p-3 bg-dark text-white">
@@ -31,7 +32,7 @@
         <li><a href="" class="nav-link px-2 text-white"></a></li>
         <li><a href="./precios.html" class="nav-link px-2 text-white">Precios</a></li>
         <li><a href="./fqa.html" class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a href="./sobreNos.html" class="nav-link px-2 text-white">Sobre nosotros</a></li>
+        <li><a href="./contacto.html" class="nav-link px-2 text-white">Contacto</a></li>
       </ul>
 
 
@@ -39,16 +40,45 @@
       <div class="text-end">
         <a href="./login.html"><button type="button" class="btn btn-outline-light me-2">Iniciar sesion</button></a>
         <a href="./registro.html"><button type="button" class="btn btn-warning me-2"> Registrarse</button></a>
-       
+
       </div>
     </div>
   </div>
 </header>
 
+<!-- Main-->
+
+<div class="container py-5 w-75">
 
 
+  <form id="contactForm">
 
- <!-- Footer-->
+
+    <div class="mb-3">
+      <label class="form-label" for="name">Nombre y Apellido</label>
+      <input class="form-control" type="text" placeholder="Nombre y apellido" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="emailAddress">Mail</label>
+      <input class="form-control"  type="email" placeholder="Mail" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="message">Escriba su consulta</label>
+      <textarea class="form-control"  type="text" placeholder="Mensage" style="height: 10rem;"></textarea>
+    </div>
+
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+    </div>
+
+  </form>
+
+</div>
+
+
+<!-- Footer-->
 <div class="container fixed-bottom">
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -87,7 +117,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 </script>
-<link rel="stylesheet" href="./css/estilos.css">
+
 
 
 </body>
