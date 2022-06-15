@@ -2,6 +2,14 @@
     background-color: rgba(0, 0, 0, 0.15);
 }
 
+.registro:hover{
+    background-color: orange;
+    border: 1px solid orange;
+    transition: 0.5s;
+}
+
+
+
 @media screen and (max-width: 450px){
     img{
         width: 0px;
