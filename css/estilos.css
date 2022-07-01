@@ -1,6 +1,6 @@
 @charset "UTF-8";
-h2 {
-  color: purple !important;
+h3 {
+  color: grey !important;
 }
 
 .fondo {
@@ -10,7 +10,6 @@ h2 {
 .registro:hover {
   background-color: orange;
   border: 1px solid orange;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -52,7 +51,6 @@ h2 {
   bottom: 0;
   left: -100%;
   right: 100%;
-  -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
@@ -61,7 +59,6 @@ h2 {
   right: 0;
   top: 0;
   bottom: 0;
-  -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
@@ -69,27 +66,23 @@ h2 {
   img {
     width: 0px;
   }
+
   .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
+
   .container {
     padding: 0;
   }
+
   footer {
     font-size: 14px;
   }
+
   footer svg {
     height: 26px;
   }
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */
