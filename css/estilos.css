@@ -1,20 +1,27 @@
 @charset "UTF-8";
+.caja--registro .login, .caja--registro .register {
+  border: 0.5px solid black;
+  border-radius: 4px;
+  margin: 1px;
+}
+
+.caja--registro .register {
+  background-color: white;
+  color: black;
+}
+
+.caja--index {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.caja--index2 {
+  background-color: white;
+  border-radius: 5px;
+}
+
 h3 {
-  color: grey !important;
-}
-
-.fondo {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
-.registro:hover {
-  background-color: orange;
-  border: 1px solid orange;
-  transition: 0.5s;
-}
-
-.booster {
-  border-radius: 10px;
+  color: black !important;
 }
 
 .ov-btn-slide-left {
@@ -60,6 +67,20 @@ h3 {
   top: 0;
   bottom: 0;
   transition: all 0.35s;
+}
+
+.fondo {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.registro:hover {
+  background-color: orange;
+  border: 1px solid orange;
+  transition: 0.5s;
+}
+
+.booster {
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 450px) {

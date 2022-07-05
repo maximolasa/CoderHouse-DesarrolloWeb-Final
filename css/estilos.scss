@@ -1,36 +1,70 @@
 @import "titulos" ;
 
+
+$mapa:(variable: #74797C , variable2: #010A0F );
+
+/* No se donde puedo aplicar el map */
+
+$estilos:(
+    background:#fff,
+    color: black,
+    border: 2px solid $fondo,
+    padding: 16px 20px,
+
+    );
+
+ /* extend */
+
+.caja--registro .login{
+    border: 0.5px solid black;
+    border-radius: 4px;
+    margin: 1px;
+}
+
+.caja--registro .register{
+   @extend .login;
+   background-color: white;
+   color: black;
+   
+}
+
+ /* mixin */
+
+@mixin caja ($fondo, $border--radius){
+    background-color: $fondo;
+    border-radius: $border--radius;
+
+}
+
+.caja--index{
+    @include caja(grey, 5px);
+}
+
+.caja--index2{
+    @include caja(white, 5px);
+}
+
+
+
+
 h3 {
     color: $color !important;
 }
-.fondo{
-    background-color: rgba(0, 0, 0, 0.15);
-}
- 
 
-.registro:hover{
-    background-color: orange;
-    border: 1px solid orange;
-    transition: 0.5s;
-}
-
-.booster{
-    border-radius: 10px;
-    
-}
-
+/* map-get */
 .ov-btn-slide-left {
-background: #fff; /* color de fondo */
-color: black; /* color de fuente */
-border: 2px solid $fondo; /* tamaño y color de borde */
-padding: 16px 20px;
-border-radius: 3px; /* redondear bordes */
+background: map-get($estilos, $background); /* color de fondo */
+color: map-get($estilos, $color ); /* color de fuente */
+border: map-get($estilos , $border); /* tamaño y color de borde */
+padding:map-get($estilos , $padding ); /* pagging*/
+border-radius: 3px; 
 position: relative;
 z-index: 1;
 overflow: hidden;
 display: inline-block;
 text-decoration: none;
 }
+
 .ov-btn-slide-left:hover {
 color: #fff; /* color de fuente hover */
 }
@@ -57,7 +91,21 @@ bottom: 0;
 transition: all 0.35s;
 }
 
+.fondo{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+ 
 
+.registro:hover{
+    background-color: orange;
+    border: 1px solid orange;
+    transition: 0.5s;
+}
+
+.booster{
+    border-radius: 10px;
+    
+}
 
 @media screen and (max-width: 450px){
     img{
