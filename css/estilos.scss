@@ -1,134 +1,155 @@
-@import "titulos" ;
+@import "titulos";
 
 
-$mapa:(variable: #74797C , variable2: #010A0F );
 
-/* No se donde puedo aplicar el map */
-
-$estilos:(
-    background:#fff,
+$estilos:(fondo:rgb(255, 255, 255),
     color: black,
-    border: 2px solid $fondo,
+    border: 2px solid #0d6efd,
     padding: 16px 20px,
 
-    );
+);
 
- /* extend */
+.fondo {
+    background-color: rgba(0, 0, 0, 0.15);
+}
 
-.caja--registro .login{
+/* map-get */
+.ov-btn-slide-left {
+    background: map-get($estilos, fondo);
+    /* color de fondo */
+    color: map-get($estilos, color);
+    /* color de fuente */
+    border: map-get($estilos, border);
+    /* tamaño y color de borde */
+    padding: map-get($estilos, padding);
+
+    /* pagging*/
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* extend */
+
+.caja--registro .login {
     border: 0.5px solid black;
     border-radius: 4px;
     margin: 1px;
 }
 
-.caja--registro .register{
-   @extend .login;
-   background-color: white;
-   color: black;
-   
+.caja--registro .register {
+    @extend .login;
+    background-color: white;
+    color: black;
+
 }
 
- /* mixin */
 
-@mixin caja ($fondo, $border--radius){
+
+/* mixin */
+
+@mixin caja ($fondo, $border--radius) {
     background-color: $fondo;
     border-radius: $border--radius;
 
 }
 
-.caja--index{
-    @include caja(grey, 5px);
+.caja--index {
+    @include caja(black, 5px);
 }
 
-.caja--index2{
+.caja--index2 {
+   
     @include caja(white, 5px);
 }
 
+.texto--caja2 {
+    font-size: 20px;
+}
 
+
+.container svg{
+    width: 60px;
+    height: 30px;
+}
+.ig{
+    color: rgba(163, 68, 158, 0.867);
+}
+.wpp{
+    color: green;
+}
 
 
 h3 {
     color: $color !important;
 }
 
-/* map-get */
-.ov-btn-slide-left {
-background: map-get($estilos, $background); /* color de fondo */
-color: map-get($estilos, $color ); /* color de fuente */
-border: map-get($estilos , $border); /* tamaño y color de borde */
-padding:map-get($estilos , $padding ); /* pagging*/
-border-radius: 3px; 
-position: relative;
-z-index: 1;
-overflow: hidden;
-display: inline-block;
-text-decoration: none;
-}
+
 
 .ov-btn-slide-left:hover {
-color: #fff; /* color de fuente hover */
+    color: #fff;
+    /* color de fuente hover */
 }
+
 .ov-btn-slide-left::after {
-content: "";
-background: $fondo; /* color de fondo hover */
-position: absolute;
-z-index: -1;
-padding: 16px 20px;
-display: block;
-top: 0;
-bottom: 0;
-left: -100%;
-right: 100%;
--webkit-transition: all 0.35s;
-transition: all 0.35s;
+    content: "";
+    background: $fondo;
+    /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
 }
+
 .ov-btn-slide-left:hover::after {
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
--webkit-transition: all 0.35s;
-transition: all 0.35s;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
 }
 
-.fondo{
-    background-color: rgba(0, 0, 0, 0.15);
-}
- 
 
-.registro:hover{
-    background-color: orange;
-    border: 1px solid orange;
-    transition: 0.5s;
-}
 
-.booster{
+.booster {
     border-radius: 10px;
-    
+
 }
 
-@media screen and (max-width: 450px){
-    img{
+@media screen and (max-width: 450px) {
+    img {
         width: 0px;
     }
-    .row{
+
+    .row {
         display: flex;
         position: relative;
         flex-direction: column;
         align-items: center;
-    
+
     }
 
-    .container{
+    .container {
         padding: 0;
-    
+
     }
 
-    footer{
+    footer {
         font-size: 14px;
     }
-    footer svg{
-        height: 26px;
+
+    .container svg{
+        width: 50px;
+        height: 30px;
     }
 }
-
