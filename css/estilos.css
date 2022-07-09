@@ -24,19 +24,6 @@
   border: 0.1px solid black;
 }
 
-/* mixin */
-.cajas .caja--index {
-  background-color: black;
-  border-radius: 5px;
-}
-.cajas .caja--index .texto--caja2 {
-  font-size: 20px;
-}
-.cajas .caja--index2 {
-  background-color: white;
-  border-radius: 5px;
-}
-
 @media screen and (max-width: 450px) {
   img {
     width: 0px;
