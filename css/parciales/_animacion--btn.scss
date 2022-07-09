@@ -1,0 +1,50 @@
+$estilos:(fondo:rgb(255, 255, 255),
+    color: black,
+    border: 2px solid #0d6efd,
+    padding: 16px 20px,
+
+);
+
+
+.boton--animado {
+    background: map-get($estilos, fondo);
+    color: map-get($estilos, color);
+    border: map-get($estilos, border);
+    padding: map-get($estilos, padding);
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff;
+
+    }
+
+    &:after {
+        content: "";
+        background: #0d6efd;
+        /* color de fondo hover */
+        position: absolute;
+        z-index: -1;
+        padding: 16px 20px;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+
+    &:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+}
