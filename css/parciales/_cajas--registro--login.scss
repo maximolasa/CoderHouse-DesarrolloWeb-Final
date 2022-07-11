@@ -2,15 +2,23 @@
 
 .caja--registro {
     .login {
-       
+
         border-radius: 8px;
         margin: 1px;
+
     }
 
     .register {
         @extend .login;
         background-color: white;
         color: black;
-        border: 0.1px solid black;
+        border: 0.1px solid white;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            border: 0.1px solid black;
+
+        }
     }
 }
