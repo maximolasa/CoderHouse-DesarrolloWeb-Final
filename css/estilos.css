@@ -118,10 +118,16 @@
   transition: all 0.35s;
 }
 
+.cajas p {
+  font-size: 25px;
+}
+
 .fondo {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-.cajas p {
-  font-size: 25px;
+.h1--contactanos {
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
 }/*# sourceMappingURL=estilos.css.map */
